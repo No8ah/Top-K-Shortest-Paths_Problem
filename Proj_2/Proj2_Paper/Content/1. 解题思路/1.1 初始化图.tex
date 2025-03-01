@@ -1,0 +1,27 @@
+\begin{algorithm}
+    \caption{Graph Initialization \ \ —— \ \ Main Function}
+    \begin{algorithmic}[1]
+    \State \textbf{Function:} \texttt{initNewGraph(int vertex\_num, int edge\_num)}
+        \State \quad \textbf{Step1:} \texttt{调用addVertices(vertex\_num)得到顶点表}
+        \State \quad \textbf{Step2:} \texttt{初始化只有顶点的new\_graph}
+        \State \quad \textbf{Step3:} \texttt{调用addEdge(new\_graph,edge\_num)往图里面加边和权值}
+        \State \quad \textbf{Step4:} \texttt{返回new\_graph}
+    \State \textbf{Return:} \texttt{AMGraph<T>* new\_graph}
+    \end{algorithmic}
+\end{algorithm}
+    
+\begin{algorithm}
+    \caption{Add Edges}
+    \begin{algorithmic}[1]
+    \State \textbf{Function:} \texttt{addEdge(AMGraph<T>* new\_graph, int edge\_num)}:
+    \State \textbf{Return:} \texttt{Nothing}
+    \end{algorithmic}
+\end{algorithm}
+    
+\begin{algorithm}
+    \caption{Add Vertices}
+    \begin{algorithmic}[1]
+    \State \textbf{Function:} \texttt{addVertices(int vertex\_num)}:
+    \State \textbf{Return:} \texttt{T* vertex\_list}
+    \end{algorithmic}
+\end{algorithm}

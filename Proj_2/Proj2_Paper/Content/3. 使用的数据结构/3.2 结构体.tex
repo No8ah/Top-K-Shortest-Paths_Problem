@@ -1,0 +1,14 @@
+\subsubsection{用于存放路径信息的结构体}
+    \begin{lstlisting}
+        struct PathInformation{
+            // 路径总权值长度
+            int path_length;
+            // 路径上经过的顶点
+            VecList<T>* path_go_through_vertices;
+        };
+    \end{lstlisting}
+
+\subsubsection{生成的所有候选路径中最短的路径}
+    \begin{lstlisting}
+        PathInformation* new_shortest_path
+    \end{lstlisting}

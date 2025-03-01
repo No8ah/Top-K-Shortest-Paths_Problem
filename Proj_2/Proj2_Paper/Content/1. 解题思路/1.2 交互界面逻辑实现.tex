@@ -1,0 +1,15 @@
+\begin{algorithm}
+    \caption{Type in Command until Type in "quit"}
+    \begin{algorithmic}[1]
+    \State \textbf{Initialize:} \texttt{string command}
+    \While{true}
+        \State \quad \texttt{command} $\gets$ input from user
+        \If{\texttt{command} = "quit"}
+            \State \quad \textbf{Break}
+        \Else
+            \State \quad \texttt{Solve(command, Graph)}
+        \EndIf
+    \EndWhile
+    \State \textbf{Output:} \texttt{"Program ended!"}
+    \end{algorithmic}
+\end{algorithm}

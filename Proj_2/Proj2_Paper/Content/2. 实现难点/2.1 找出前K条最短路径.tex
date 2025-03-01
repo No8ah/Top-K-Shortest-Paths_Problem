@@ -1,0 +1,22 @@
+\begin{algorithm}[htbp]
+    \caption{Find Top K Shortest Paths\ \ —— \ \ Main Function}
+    \begin{algorithmic}[1]
+    \State \textbf{Input:} \texttt{Start\_Vertex}, \texttt{End\_Vertex}, \texttt{Top\_K\_Shortest\_Paths}
+    \State \textbf{Initialize}
+    \State \textbf{Dijkstra} to find first shortest path.(实现难点)
+    \State \textbf{Put} first shortest path(if existed) into top k shortest path.
+    \State \textbf{Generate} candidate paths.(实现难点)
+    \While{counter < limitation \textbf{and} candidate paths is not empty}
+        \State \textbf{Remove} same path in candidate paths.
+        \State \textbf{Select} the shortest path in candidate paths.
+        \State \textbf{Remove} the select one in candidate paths.
+        \If{satisfy maxTrans}
+            \State \textbf{Insert} new shortest path into top k shortest path.
+        \EndIf
+        \State \textbf{Generate} new candidate paths based on the select one above.
+        \State \textbf{Counter} ++.
+    \EndWhile
+    \State \textbf{Print} final outcome.
+    \State \textbf{Delete} memory.
+    \end{algorithmic}
+\end{algorithm}

@@ -1,0 +1,88 @@
+\begin{algorithm}
+    \caption{Solve Command for Graph Operations \ \ —— \ \ Main Function}
+    \begin{algorithmic}[1]
+    \State \textbf{Input:} \texttt{string command}, \texttt{AMGraph<T>* Graph}
+    \If{\texttt{command} = "ban"}
+        \State \quad \texttt{ban\_vertex} $\gets$ input from user
+        \State \quad \texttt{Graph->addVertexIntoBlackList(ban\_vertex)}
+        \State \quad \texttt{Graph->printVertexInBlackList()}
+    \Else
+        \If{\texttt{command} = "unban"}
+            \State \quad \texttt{unban\_vertex} $\gets$ input from user
+            \State \quad \texttt{Graph->removeVertexOutOfBlackList(unban\_vertex)}
+            \State \quad \texttt{Graph->printVertexInBlackList()}
+        \Else
+            \If{\texttt{command} = "maxTrans"}
+                \State \quad \texttt{max\_trans\_num} $\gets$ input from user
+                \State \quad \texttt{Graph->limitMaxTransitVertexAs(max\_trans\_num)}
+            \Else
+                \If{\texttt{command} = "paths"}
+                    \State \quad \texttt{start\_vertex}, \texttt{end\_vertex} $\gets$ input from user
+                    \State \quad \texttt{top\_k\_shortest\_path} $\gets$ input from user
+                    \State \quad \texttt{Graph->findTopKShortestPath(start\_vertex, end\_vertex, top\_k\_shortest\_path)}
+                    \State \quad \texttt{Graph->printFinalOutcome()}
+                \Else
+                    \State \quad \texttt{Print "Invalid command!"}
+                \EndIf
+            \EndIf
+        \EndIf
+    \EndIf
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+    \caption{Add Vertex into Black List}
+    \begin{algorithmic}[1]
+    \State \textbf{Input:} Ban\_Vertex
+    \State \quad \texttt{ban\_vertex\_index} $\gets$ \texttt{verList.locateEle(Ban\_Vertex)}
+    \If{ban\_vertex\_index = -1}
+        \State \textbf{Print} message.
+        \State \textbf{Return}
+    \Else
+        \State \textbf{Print} message.
+        \State \textbf{Put} Ban\_Vertex into black list.
+        \State \textbf{Store} corresponding in/out vertex and edge weight.
+        \State \textbf{Ban} corresponding edge weight.
+    \EndIf
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+    \caption{Remove Vertex from Black List}
+    \begin{algorithmic}[1]
+    \State \textbf{Input:} Unban\_Vertex
+    \State \quad \texttt{unban\_vertex\_index} $\gets$ \texttt{verList.locateEle(Unban\_Vertex)}
+    \If{\texttt{unban\_vertex\_index = -1}}
+        \State \textbf{Print} message.
+        \State \textbf{Return}
+    \Else
+        \If{Unban\_Vertex is not in black list}
+            \State \textbf{Print} message.
+            \State \textbf{Return}  
+        \Else
+            \State \textbf{Recover} graph.
+            \State \textbf{Remove} Unban\_Vertex out of black list.
+        \EndIf
+    \EndIf
+    \end{algorithmic}
+\end{algorithm}
+
+\begin{algorithm}
+    \caption{Limit Max Transit Vertex Number}
+    \begin{algorithmic}[1]
+    \State \textbf{Input:} Max\_Trans\_Num
+    \If{0 <= Max\_Trans\_Num <= numVer-2}
+        \State \textbf{Print} message.
+        \State \textbf{Set} max\_transition\_vertex\_num in graph.
+    \Else
+        \If{Max\_Trans\_Num = -1}
+            \State \textbf{Print} message.
+            \State \textbf{Unlimit} max\_transition\_vertex\_num in graph.
+        \Else
+            \State \textbf{Print} message.
+        \EndIf
+    \EndIf
+    \end{algorithmic}
+\end{algorithm}
+
+

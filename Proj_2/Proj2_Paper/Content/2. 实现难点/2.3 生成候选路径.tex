@@ -1,0 +1,19 @@
+\begin{algorithm}
+    \caption{Generate Candidate Paths \ \ —— \ \ 实现难点}
+    \begin{algorithmic}[1]
+    \State \textbf{Input:} Start\_Vertex, End\_Vertex, Top\_K\_Shortest\_Paths, Candidates\_Paths
+    \State \textbf{Get} last shortest path and corresponding veclist. 
+    \State \textbf{Initialize} remove edges set and add edges used to be deleted.
+    \For{each vertex in last shortest path(except for end vertex)}
+        \State \textbf{Initialize} empty root path.
+        \State \textbf{Add} vertices to root path.
+        \State \textbf{Get} deviation vertex and remove edge.
+        \State \textbf{Remove} edges with same prefix.
+        \State \textbf{Dijkstra}(base on deviation vertex) to find another new path.
+        \State \textbf{Combine} new path with root path
+        \State \textbf{Add} new generate path to candidates paths based on weight.
+        \State \textbf{Delete} \texttt{memory}.
+    \EndFor
+    \State \textbf{Recover} \texttt{graph}.
+    \end{algorithmic}
+\end{algorithm}
