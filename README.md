@@ -28,7 +28,7 @@ Dijkstra算法可以解决什么问题呢? —— "单源最短路径"。
 \text{起点到终点的} \underline{K} \text{条最短路径}
 ```
 
-那怎么才能处理呢? —— "Djikstra Algo" 和 "Yet Algo"。
+那怎么才能处理呢? —— "Djikstra Algo" 和 "Yen Algo"。
 
 ## 限制条件
 
